@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/assets/styles/main.scss";
+
+// Variables
+$color-primary-yellow: hsl(47, 88%, 63%);
+$color-neutral-white: hsl(0, 0%, 100%);
+$color-neutral-grey: hsl(0, 0%, 50%);
+$color-neutral-black: hsl(0, 0%, 7%);
+
+// Typography
+$font-family-primary: 'Figtree', sans-serif;
+$font-weight-regular: 500;
+$font-weight-bold: 800;
+$font-size-body: 16px;
+
+// Layout
+$mobile-width: 375px; // 1440px
+$mobile-width: 90em; // 1440px
+
+// Mixins
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin responsive($property, $value-mobile, $value-desktop) {
+  #{$property}: $value-mobile;
+
+  @media (min-width: $desktop-width) {
+    #{$property}: $value-desktop;
+  }
+}
+
+// :host {
+//   --primary-yellow: hsl(47, 88%, 63%);
+//   --neutral-white: hsl(0, 0%, 100%);
+//   --neutral-grey: hsl(0, 0%, 50%);
+//   --neutral-black: hsl(0, 0%, 7%)
+// }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-family-primary;
+
+  @include font-size($font-size-body);
+
+}

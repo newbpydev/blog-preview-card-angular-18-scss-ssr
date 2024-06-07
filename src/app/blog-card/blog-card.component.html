@@ -1,0 +1,36 @@
+<article class="blog-card">
+  <header class="blog-card__header">
+    <!-- image -->
+    <img
+      src="assets/images/illustration-article.svg"
+      alt="Article illustration"
+    />
+    <!-- tag -->
+    <p class="blog-card__tag">{{ blog().tag }}</p>
+
+    <!-- publish date -->
+    <p class="blog-card__published-date">
+      Published {{ blog().publishedDate }}
+    </p>
+  </header>
+
+  <section class="blog-card__section">
+    <!-- title -->
+    <h1 class="blog-card__title">{{ blog().title }}</h1>
+
+    <!-- description -->
+    <p class="blog-card__description">{{ blog().description }}</p>
+  </section>
+
+  <footer class="blog-card__footer">
+    <!-- author -->
+    <img
+      src="assets/images/image-avatar.webp"
+      [alt]="'Avatar image of ' + blog().author"
+      [title]="blog().author"
+      class="blog-card__author-img"
+    />
+
+    <span class="blog-card__author-name">{{ blog().author }}</span>
+  </footer>
+</article>
