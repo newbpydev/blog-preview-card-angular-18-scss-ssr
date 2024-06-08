@@ -1,0 +1,26 @@
+@import 'variables';
+
+// Mixins
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin responsive($property, $value-mobile, $value-laptop: none, $value-desktop: none) {
+  #{$property}: $value-mobile;
+
+  @if ($value-laptop !=none) {
+    @media (min-width: $width-laptop) {
+      #{$property}: $value-laptop;
+    }
+  }
+
+  @if ($value-desktop !=none) {
+    @media (min-width: $width-desktop) {
+      #{$property}: $value-desktop;
+    }
+  }
+}

@@ -1,3 +1,85 @@
+@use '../../styles.scss' as vars;
+@use "../assets/styles/base/mixins" as mix;
+
 .blog-card {
-  width: 384px;
+  @include mix.responsive(width, 32.7rem, 38.4rem);
+  padding: 2.4rem;
+  background-color: vars.$color-neutral-white;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border: 1px solid vars.$color-neutral-black;
+
+  // box-shadow: 8px 8px 0 vars.$color-neutral-black;
+  @include mix.responsive(box-shadow,
+    8px 8px 0 vars.$color-neutral-black,
+    16px 16px 0 vars.$color-neutral-black);
+
+  &__header {
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .blog-card {
+      &__image {
+        display: block;
+        height: 200px;
+        @include mix.responsive(scale, 1.2, 1.0);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    .blog-card {
+      &__category {
+        @include mix.responsive(font-size, vars.$font-size-body-s-mobile, vars.$font-size-body-s-desktop);
+        font-weight: vars.$font-weight-bold;
+        background-color: vars.$color-primary-yellow;
+        padding: 4px 12px;
+        margin-right: auto;
+        border-radius: 4px;
+      }
+
+      &__date {
+        @include mix.responsive(font-size, vars.$font-size-body-s-mobile, vars.$font-size-body-s-desktop)
+      }
+
+      &__title {
+        @include mix.responsive(font-size, vars.$font-size-body-l-mobile, vars.$font-size-body-l-desktop);
+        font-weight: vars.$font-weight-bold;
+        cursor: pointer;
+        transition: color .2s ease;
+
+        &:hover {
+          color: vars.$color-primary-yellow;
+        }
+      }
+
+      &__description {
+        color: vars.$color-neutral-grey;
+        @include mix.responsive(font-size, vars.$font-size-body-m-mobile, vars.$font-size-body-m-desktop)
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    .blog-card {
+      &__author-name {
+        font-weight: vars.$font-weight-bold;
+
+      }
+    }
+
+
+  }
+
+
 }

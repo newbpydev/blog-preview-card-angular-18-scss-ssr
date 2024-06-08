@@ -1,5 +1,5 @@
 export interface Blog {
-  tag: string;
+  category: string;
   publishedDate: string;
   title: string;
   description: string;
@@ -7,7 +7,7 @@ export interface Blog {
 }
 
 export const exampleBlogCard: Blog = {
-  tag: 'Learning',
+  category: 'Learning',
   publishedDate: '21 Dec 2023',
   title: 'HTML & CSS foundations',
   description:

@@ -2,19 +2,22 @@
   <header class="blog-card__header">
     <!-- image -->
     <img
-      src="assets/images/illustration-article.svg"
+      class="blog-card__image"
+      ngSrc="assets/images/illustration-article.svg"
+      height="200"
+      width="336"
+      priority
       alt="Article illustration"
     />
-    <!-- tag -->
-    <p class="blog-card__tag">{{ blog().tag }}</p>
-
-    <!-- publish date -->
-    <p class="blog-card__published-date">
-      Published {{ blog().publishedDate }}
-    </p>
   </header>
 
-  <section class="blog-card__section">
+  <section class="blog-card__content">
+    <!-- tag -->
+    <p class="blog-card__category">{{ blog().category }}</p>
+
+    <!-- publish date -->
+    <p class="blog-card__date">Published {{ blog().publishedDate }}</p>
+
     <!-- title -->
     <h1 class="blog-card__title">{{ blog().title }}</h1>
 
@@ -25,10 +28,12 @@
   <footer class="blog-card__footer">
     <!-- author -->
     <img
-      src="assets/images/image-avatar.webp"
+      ngSrc="assets/images/image-avatar.webp"
+      width="32"
+      height="32"
       [alt]="'Avatar image of ' + blog().author"
       [title]="blog().author"
-      class="blog-card__author-img"
+      class="blog-card__author-image"
     />
 
     <span class="blog-card__author-name">{{ blog().author }}</span>
