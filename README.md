@@ -30,6 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
+![lighthouse screenshot](./src/app/assets/readme-images/lighthouse.png)
 ![mobile screenshot](./src/app/assets/readme-images/mobile-screenshot.png)
 ![desktop screenshot](./src/app/assets/readme-images/desktop-screenshot.png)
 ![desktop screenshot with hover effect](./src/app/assets/readme-images/desktop-screenshot-hover.png)
