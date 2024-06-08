@@ -13,7 +13,7 @@
 
   // box-shadow: 8px 8px 0 vars.$color-neutral-black;
   @include mix.responsive(box-shadow,
-    8px 8px 0 vars.$color-neutral-black,
+    8px 8px 0 vars.$color-neutral-black, none,
     16px 16px 0 vars.$color-neutral-black);
 
   &__header {
