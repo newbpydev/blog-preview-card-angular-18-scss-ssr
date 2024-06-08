@@ -1,0 +1,2 @@
+User-agent: *  # Applies to all crawlers
+Allow: /         # Allow crawling of all pages (adjust if needed)
