@@ -1,28 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
 @import "./app/assets/styles/main.scss";
-
-// Variables
-$color-primary-yellow: hsl(47, 88%, 63%);
-$color-neutral-white: hsl(0, 0%, 100%);
-$color-neutral-grey: hsl(0, 0%, 50%);
-$color-neutral-black: hsl(0, 0%, 7%);
-
-// Typography
-$font-family-primary: 'Figtree', sans-serif;
-$font-weight-regular: 500;
-$font-weight-bold: 800;
-
-$font-size-body-l-mobile: 20px;
-$font-size-body-l-desktop: 24px;
-$font-size-body-m-mobile: 14px;
-$font-size-body-m-desktop: 16px;
-$font-size-body-s-mobile: 12px;
-$font-size-body-s-desktop: 14px;
-
-// Layout
-$width-mobile: 23.4275em; // 375px
-$width-laptop: 45em; // 720px
-$width-desktop: 90em; // 1440px
 
 * {
   box-sizing: border-box;
